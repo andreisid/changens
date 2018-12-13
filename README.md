@@ -44,7 +44,7 @@ If you do not configure properly the config file, the interface will be moved to
       ./changens.sh -i=wlan0 -n=my_ns           # will move the interface to my_ns namespace 
       ip netns exec wifi curl ifconfig.me       # will make a request from the new network namespace       
       ip netns exec wifi bash; su - myuser; DISPLAY=:0 firefox      # will run firefox from the new network namespace 
-
+      alias bp="sudo ip netns exec wifi runuser -u myuser bash"	# ex: bp firefox  
 ### Todo
 
 - Add support for ethernet interfaces

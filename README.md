@@ -5,25 +5,24 @@
 
  ### Usage: 
  
-   Usage:  [-i|--interface <int_name>] [-n|--namespace <namespace>] [-r|--rollback] [-h|--h|-help|--help]
+   Usage:  [-i|--interface <int_name>] [-n|--namespace <namespace>] [-r|--rollback] [-h|--h|-help|--help]  
 
-   optional arguments:
-     -i, --interface <int_name>        Name of the wireless interface to move to a new netwok space
-     -n, --namespace <namespace>       Network namespace to move the interface to
-     -c, --conf <file>                 Configuration file for logging to WPA wireless network
-     -r, --rollback                    Bring the interface back to the main namespace. Should only be run after interface was moved to a namespace
-     -h, --help                        Show this help message and exit
+   optional arguments:  
+     -i, --interface <int_name>        Name of the wireless interface to move to a new netwok space  
+     -n, --namespace <namespace>       Network namespace to move the interface to  
+     -c, --conf <file>                 Configuration file for logging to WPA wireless network  
+     -r, --rollback                    Bring the interface back to the main namespace. Should only be run after interface was moved to a namespace  
+     -h, --help                        Show this help message and exit  
     
-    Notes: If no option is provided, the defaults parameters will be used.
-           The default parameters are: 
+   Notes: If no option is provided, the defaults parameters will be used.
+          The default parameters are:
                         INTERFACE="wlan0"
                         PHY_INTERFACE="phy0"
                         NAMESPACE="wifi"
                         CONF_FILE="./wpa_supplicant.conf"  
-    
-            To run a process in a namespace do: ip netns exec <namespace> <process>
-            Example: ip netns exec wifi curl ifconfig.me
-                     ip netns exec wifi bash; su - myuser; DISPLAY=:0 firefox  
+          To run a process in a namespace do: ip netns exec <namespace> <process>  
+          Example: ip netns exec wifi curl ifconfig.me  
+                   ip netns exec wifi bash; su - myuser; DISPLAY=:0 firefox  
  
  ### Notes
  
